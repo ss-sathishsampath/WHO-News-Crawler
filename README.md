@@ -6,6 +6,7 @@ Developer: Sathish Sampath(ss.sathishsampath@gmail.com)
 
 * Developed a crawler to crawl the WHO website for any new News Release. 
 * Store all the data collected as a list of dictionary.
+* Can be scheduled to run at a particular time every day or run evey nth time(minute/hour)
 
 News Alert module, which updates the users about the latest news is yet to integrated.
 
