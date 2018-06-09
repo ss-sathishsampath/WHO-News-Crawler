@@ -23,4 +23,4 @@ mechanize, bs4, schedule
 
 ## Execution
 
-Run the file.
+python crawler_agent.py
