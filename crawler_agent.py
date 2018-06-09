@@ -27,10 +27,11 @@ def crawler():
     soup = BS(agent_data.read(), "lxml")
     
     for row in soup.find_all('div',attrs={"class" : "list-view--item vertical-list-item"}):   
+        link = row.find('a')['href']
         date = row.find('span',attrs={"class" : "timestamp"}).text
         text = row.find('p',attrs={"class" : "heading text-underline"}).text
-        if {"date": date, "news":text} not in total_news:
-            total_news.append({"date": date, "news": text})
+        if {"date": date, "news":text, "link": link} not in total_news:
+            total_news.append({"date": date, "news": text, "link": link})
 
 
 schedule.every().day.at("07:30").do(crawler)
